@@ -2,13 +2,15 @@ using System;
 
 namespace gary_garage
 {
-    public class Cessna : Vehicle
+    public class Cessna : Vehicle, IGasVehicle
     {
         public double FuelCapacity { get; set; }
 
+        public int CurrentTankPercentage { get; set; }
+
         public void RefuelTank()
         {
-            Console.WriteLine();
+            CurrentTankPercentage = 100;
         }
 
     }
