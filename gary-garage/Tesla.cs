@@ -4,11 +4,13 @@ namespace gary_garage
 {
     public class Tesla : Vehicle, IElectricVehicle
     {
+        // property for Tesla
         public double BatteryKWh { get; set; }
 
         public int CurrentChargePercentage { get; set; }
 
-        public void Charge()
+        //  method for charging battery
+        public void ChargeBattery()
         {
             CurrentChargePercentage = 100;
         }

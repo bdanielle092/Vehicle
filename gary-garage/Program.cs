@@ -27,58 +27,48 @@ namespace gary_garage
             fxs.MainColor = "red";
             fxs.MaximumOccupancy = 4;
 
-            // ram.Drive();
-            // mx410.Drive();
-            // spark.Drive();
-            // modelS.Drive();
-            // fxs.Drive();
-            // Console.WriteLine("");
-            // ram.Turn();
-            // mx410.Turn();
-            // spark.Turn();
-            // modelS.Turn();
-            // fxs.Turn();
-            // Console.WriteLine("");
-            // ram.Stop();
-            // mx410.Stop();
-            // spark.Stop();
-            // modelS.Stop();
-            // fxs.Stop();
+            ram.Drive();
+            mx410.Drive();
+            spark.Drive();
+            modelS.Drive();
+            fxs.Drive();
+            Console.WriteLine("");
+            ram.Turn();
+            mx410.Turn();
+            spark.Turn();
+            modelS.Turn();
+            fxs.Turn();
+            Console.WriteLine("");
+            ram.Stop();
+            mx410.Stop();
+            spark.Stop();
+            modelS.Stop();
+            fxs.Stop();
 
-            // static void Drive(Vehicle aVehicle)
-            // {
-            //     aVehicle.Drive();
-            // }
-
-            // static void Turn(Vehicle aVehicle)
-            // {
-            //     aVehicle.Turn();
-            // }
-            // static void Stop(Vehicle aVehicle)
-            // {
-            //     aVehicle.Stop();
-            // }
-            // List<IElectricVehicle> electricVehicles = new List<IElectricVehicle>()
-            // {
-            //     fxs,
-            //     modelS
-            // };
+            // this is a list of electricVehicles
+            List<IElectricVehicle> electricVehicles = new List<IElectricVehicle>()
+            {
+                fxs,
+                modelS
+            };
+            // This say for each electric vehicle show the current charged precentage 
 
             Console.WriteLine("Electric Vehicles");
             foreach (IElectricVehicle ev in electricVehicles)
             {
-                Console.WriteLine($"{ev.CurrentChargePercentage}");
+                Console.WriteLine($"Your battery is at {ev.CurrentChargePercentage} precent.");
             }
-
-            foreach ( ?? ? ev in electricVehicles)
+            // This say for each electrice vehicle charge battery to 100 precent
+            foreach (IElectricVehicle ev in electricVehicles)
             {
                 // This should charge the vehicle to 100%
                 ev.ChargeBattery();
             }
 
-            foreach ( ?? ? ev in electricVehicles)
+            // This say for each electric vehicle show the current charged precentage  which should be 100 precent now
+            foreach (IElectricVehicle ev in electricVehicles)
             {
-                Console.WriteLine($"{ev.CurrentChargePercentage}");
+                Console.WriteLine($"Your battery is at {ev.CurrentChargePercentage} precent now!");
             }
 
             /***********************************************/
@@ -90,22 +80,22 @@ namespace gary_garage
                 spark,
 
             };
-
+            // This say for each gas vehicle show the current tank precentage 
             Console.WriteLine("Gas Vehicles");
-            foreach ( ?? ? gv in gasVehicles)
+            foreach (IGasVehicle gv in gasVehicles)
             {
-                Console.WriteLine($"{gv.CurrentTankPercentage}");
+                Console.WriteLine($"Your tank is at {gv.CurrentTankPercentage} precent.");
             }
-
-            foreach ( ?? ? gv in gasVehicles)
+            // This say for each gas vehicle fill the tank to 100 precent
+            foreach (IGasVehicle gv in gasVehicles)
             {
                 // This should completely refuel the gas tank
                 gv.RefuelTank();
             }
-
-            foreach ( ?? ? gv in gasVehicles)
+            // This say for each gas vehicle show the current tank precentage which should be 100 precent now
+            foreach (IGasVehicle gv in gasVehicles)
             {
-                Console.WriteLine($"{gv.CurrentTankPercentage}");
+                Console.WriteLine($"Your tank is at {gv.CurrentTankPercentage} precent now!");
             }
         }
     }
