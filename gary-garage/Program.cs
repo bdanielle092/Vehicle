@@ -10,6 +10,7 @@ namespace gary_garage
             Ram ram = new Ram();
             ram.MainColor = "blue";
             ram.MaximumOccupancy = 5;
+            ram.CurrentTankPercentage = 50;
 
             Cessna mx410 = new Cessna();
             mx410.MainColor = "white";
